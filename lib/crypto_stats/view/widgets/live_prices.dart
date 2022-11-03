@@ -10,10 +10,29 @@ class LivePrices extends StatefulWidget {
 }
 
 class _LivePricesState extends State<LivePrices> {
+   late Stream realDataStream;
+  @override
+  @override
+  void initState() {
+     realDataStream =
+        BlocProvider.of<LivePricesCubit>(context).getRealData();
+    super.initState();
+    
+  }
+// Trade old = Trade("", "", "", "", "");
+//   void color (Trade data){
+//     if()
+//     old = data;
+
+
+
+
+
+//   }
+
   @override
   Widget build(BuildContext context) {
-    final realDataStream =
-        BlocProvider.of<LivePricesCubit>(context).getRealData();
+    
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: <
         Widget>[
       const Text('Live Prices', style: TextStyle(fontSize: 17)),
@@ -21,8 +40,10 @@ class _LivePricesState extends State<LivePrices> {
           height: 230,
           padding: const EdgeInsets.only(top: 10),
           child: StreamBuilder<dynamic>(
+           
               stream: realDataStream,
               builder: (context, snapshot) {
+                
                 if (snapshot.hasData) {
                   final realData = Trade.fromJson(
                       jsonDecode(snapshot.data.toString())
@@ -32,6 +53,7 @@ class _LivePricesState extends State<LivePrices> {
                       scrollDirection: Axis.horizontal,
                       itemCount: tradeList.length,
                       itemBuilder: (BuildContext context, int index) {
+                        
                         tradeList
                             .firstWhere((element) =>
                                 element.symbolId == realData.symbolId)

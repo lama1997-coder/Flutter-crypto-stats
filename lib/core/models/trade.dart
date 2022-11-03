@@ -1,7 +1,7 @@
 import 'package:crypto_stats/generated/assets.gen.dart';
 
 // ignore: public_member_api_docs
-class Trade {
+class Trade  {
   // ignore: public_member_api_docs
   String title1;
   // ignore: public_member_api_docs

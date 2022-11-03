@@ -22,7 +22,8 @@ class LivePricesCubit extends Cubit<LivePricesState> {
 
   // ignore: public_member_api_docs
   Stream getRealData() {
-    _channel.sink.add(json.encode({
+    
+   var old =  _channel.sink.add(json.encode({
       'type': 'hello',
       'apikey': apiKey,
       'heartbeat': false,

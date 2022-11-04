@@ -129,7 +129,8 @@ class _LivePricesState extends State<LivePrices> {
                     ],
                   );
                 } else {
-                  return const Center(child: CircularProgressIndicator());
+                  return Lottie.network(
+                      'https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json');
                 }
               }))
     ]);

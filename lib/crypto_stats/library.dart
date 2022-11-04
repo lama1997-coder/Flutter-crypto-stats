@@ -15,6 +15,7 @@ import 'package:crypto_stats/l10n/l10n.dart';
 import 'package:crypto_stats/core/cubit/crypto_assets_cubit.dart';
 import 'package:crypto_stats/core/cubit/live_prices_cubit.dart';
 import 'package:crypto_stats/core/models/trade.dart';
+import 'package:lottie/lottie.dart';
 
 part 'view/crypto_stats_page.dart';
 part 'view/widgets/profile.dart';

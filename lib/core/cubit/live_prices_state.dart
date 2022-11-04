@@ -5,4 +5,8 @@ part of 'live_prices_cubit.dart';
 abstract class LivePricesState {}
 
 // ignore: public_member_api_docs
-class LivePricesInitial extends LivePricesState {}
+class LivePricesInitial extends LivePricesState {
+
+
+  
+}

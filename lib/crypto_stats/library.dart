@@ -3,7 +3,9 @@ library ui.library;
 import 'dart:async';
 import 'dart:convert';
 import 'dart:core';
+import 'dart:ffi';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:chart_sparkline/chart_sparkline.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
